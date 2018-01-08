@@ -1,1 +1,1 @@
-This repository will contain solutions written in the Go language for Project Euler problems. 
+This repository will contain programming solutions written in the Go language. 
