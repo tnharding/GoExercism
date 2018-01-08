@@ -4,6 +4,7 @@ package acronym
 
 import (
 	"strings"
+	"unicode"
 )
 
 // Abbreviate creates an acronym for the supplied string
@@ -22,5 +23,5 @@ func Abbreviate(s string) string {
 
 //Split determines if split is to occur with the supplied character
 func Split(r rune) bool {
-	return r == ' ' || r == '-'
+	return !unicode.IsLetter(r)
 }
