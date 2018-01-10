@@ -1,1 +1,1 @@
-This repository will contain programming solutions written in the Go language. 
+This repository contains programming solutions in Go to the problems at Exercism.io. 
