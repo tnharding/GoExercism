@@ -7,13 +7,10 @@ import (
 	"strings"
 )
 
-//Replace space chars with nothing
-var replacer = strings.NewReplacer(" ", "")
-
 func Valid(num string) bool {
 
 	//Remove all space chars from num
-	s := replacer.Replace(num)
+	s := strings.Replace(num, " ", "", -1)
 
 	//check to see if we have any non digit characters in string
 	if _, err := strconv.Atoi(s); err != nil {
@@ -42,14 +39,7 @@ func Valid(num string) bool {
 		total += numInts[i]
 	}
 
-	//if total is not a factor of 10
-	//return invalid number
-	if total%10 != 0 {
-		return false
-	}
-
-	//number is valid
-	return true
+	return total%10 == 0
 }
 
 func convertNumToIntSlice(num string) []int {
